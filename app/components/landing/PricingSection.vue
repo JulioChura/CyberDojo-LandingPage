@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="text-center mb-12 sm:mb-16">
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
-          Contacto
+          Precios
         </h2>
         <p class="mt-4 text-base sm:text-lg text-slate-400 max-w-3xl mx-auto">
           Elige cómo empezar: prueba gratis, valida con tu institución, o expande a toda la red.
@@ -97,29 +97,31 @@ const pricingPlans: PricingPlan[] = [
     cta: 'Probar Demo'
   },
   {
-    name: 'Centro Educativo',
-    price: 'Personalizado',
-    description: 'Para escuelas que quieren validar con nosotros.',
+    name: 'Centro educativo',
+    price: 'Personalizado / desde piloto',
+    description: 'Para instituciones que desean implementar CyberDojo con estudiantes o grupos.',
     features: [
       'Múltiples estudiantes',
-      'Escenarios disponibles',
-      'Reportes de progreso',
+      'Escenarios completos',
+      'Panel docente',
+      'Reportes de aprendizaje',
       'Soporte directo'
     ],
-    cta: 'Solicitar validación',
+    cta: 'Solicitar piloto',
     featured: true
   },
   {
-    name: 'Secretarías / Redes',
+    name: 'Programas y redes educativas',
     price: 'Consultar',
-    description: 'Para implementaciones en múltiples sedes.',
+    description: 'Para implementaciones a escala en redes educativas, municipios o programas públicos.',
     features: [
       'Gestión centralizada',
-      'Adaptable a LMS existentes',
-      'Escenarios educativos',
-      'Acompañamiento especializado'
+      'Integración con LMS',
+      'Escenarios educativos completos',
+      'Acompañamiento pedagógico',
+      'Implementación a gran escala'
     ],
-    cta: 'Contactar'
+    cta: 'Solicitar propuesta'
   }
 ]
 

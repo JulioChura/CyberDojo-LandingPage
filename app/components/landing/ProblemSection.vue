@@ -12,26 +12,43 @@
       </div>
 
       <!-- Risk Cards Grid -->
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        <div
-          v-for="risk in risks"
-          :key="risk.title"
-          :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group', risk.gridClass]
-        "
-        >
-          <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
+      <div>
+        <!-- First row: up to 3 cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            v-for="risk in firstRow"
+            :key="risk.title"
+            :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group', risk.gridClass]"
+          >
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 
-          <div class="w-full aspect-video mb-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-            <img
-              :src="risk.image"
-              :alt="risk.title"
-              class="w-full h-full object-cover rounded-2xl"
-            />
+            <div class="w-full aspect-video mb-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+              <img :src="risk.image" :alt="risk.title" class="w-full h-full object-cover rounded-2xl" />
+            </div>
+
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">{{ risk.title }}</h3>
+            <p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed px-2">{{ risk.description }}</p>
           </div>
+        </div>
 
-          <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">{{ risk.title }}</h3>
-          <p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed px-2">{{ risk.description }}</p>
+        <!-- Second row: remaining cards centered, stack on small screens -->
+        <div v-if="secondRow.length" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
+          <div
+            v-for="risk in secondRow"
+            :key="risk.title"
+            class="w-full sm:w-[36rem] md:w-[28rem] lg:w-[32rem]"
+          >
+            <div :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group']">
+              <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 
+              <div class="w-full aspect-video mb-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                <img :src="risk.image" :alt="risk.title" class="w-full h-full object-cover rounded-2xl" />
+              </div>
+
+              <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">{{ risk.title }}</h3>
+              <p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed px-2">{{ risk.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -78,4 +95,8 @@ const risks: Risk[] = [
     image: '/DigitalRisks/enlaces-maliciosos.avif'
   }
 ]
+
+// split into first row (3) and second row (rest)
+const firstRow = risks.slice(0, 3)
+const secondRow = risks.slice(3)
 </script>

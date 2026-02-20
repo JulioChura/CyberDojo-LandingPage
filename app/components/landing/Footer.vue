@@ -39,7 +39,7 @@ interface FooterLink {
 const footerLinks: FooterLink[] = [
   { text: 'Privacidad', href: '#' },
   { text: 'Términos', href: '#' },
-  { text: 'Contacto', href: '#' }
+  { text: 'Precios', href: '#' }
 ]
 
 const currentYear = computed(() => new Date().getFullYear())
