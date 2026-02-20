@@ -37,14 +37,13 @@
 
       <!-- Heading -->
       <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white">
-        Entrena a estudiantes para enfrentar 
+        Prepara a menores de edad para enfrentar
         <span class="text-primary bg-clip-text">riesgos digitales reales</span>
       </h1>
 
       <!-- Description -->
       <p class="max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400">
-        Simulaciones seguras impulsadas por IA que preparan a las nuevas generaciones para el mundo digital. Detecta, decide y aprende.
-      </p>
+        Simulaciones seguras impulsadas por IA que preparan a las nuevas generaciones para el mundo digital. Detecta, decide y aprende.      </p>
 
       <!-- CTA Buttons -->
       <div class="flex flex-col w-full sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4">
