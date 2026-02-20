@@ -53,7 +53,7 @@ const gameModes: GameMode[] = [
   {
     title: 'Modo Historia',
     description: 'Pon a prueba tus habilidades en una narrativa envolvente a través de escenarios de riesgo digital.',
-    image: '/GamesMode/historyGif.gif'
+    image: '/GamesMode/historyGif.webp'
   },
   {
     title: '¿Confías o no?',
