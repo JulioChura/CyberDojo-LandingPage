@@ -30,8 +30,6 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
-
 h1 {
   font-family: 'Fredoka', sans-serif;
 }

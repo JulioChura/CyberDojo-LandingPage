@@ -8,6 +8,7 @@
       loop 
       playsinline
       aria-hidden="true"
+      preload="auto"
     >
       <source src="/video.mp4" type="video/mp4">
       Tu navegador no soporta videos HTML5.

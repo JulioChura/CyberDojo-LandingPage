@@ -25,7 +25,7 @@
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 
             <div class="w-full aspect-video mb-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              <img :src="risk.image" :alt="risk.title" class="w-full h-full object-cover rounded-2xl" />
+              <img :src="risk.image" :alt="risk.title" class="w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="675" />
             </div>
 
             <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">{{ risk.title }}</h3>
@@ -44,7 +44,7 @@
               <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 
               <div class="w-full aspect-video mb-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                <img :src="risk.image" :alt="risk.title" class="w-full h-full object-cover rounded-2xl" />
+                <img :src="risk.image" :alt="risk.title" class="w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="675" />
               </div>
 
               <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">{{ risk.title }}</h3>
