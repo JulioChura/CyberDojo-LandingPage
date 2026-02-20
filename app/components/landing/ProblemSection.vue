@@ -16,9 +16,11 @@
         <!-- First row: up to 3 cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div
-            v-for="risk in firstRow"
+            v-for="(risk, i) in firstRow"
             :key="risk.title"
             :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group', risk.gridClass]"
+            data-reveal
+            :data-reveal-delay="i * 70"
           >
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 
@@ -34,11 +36,11 @@
         <!-- Second row: remaining cards centered, stack on small screens -->
         <div v-if="secondRow.length" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
           <div
-            v-for="risk in secondRow"
+            v-for="(risk, i) in secondRow"
             :key="risk.title"
             class="w-full sm:w-[36rem] md:w-[28rem] lg:w-[32rem]"
           >
-            <div :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group']">
+            <div :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group']" data-reveal :data-reveal-delay="(i+3) * 70">
               <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 
               <div class="w-full aspect-video mb-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">

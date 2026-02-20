@@ -20,9 +20,11 @@
       <!-- Game Modes Grid -->
       <div class="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
         <div
-          v-for="mode in gameModes"
+          v-for="(mode, i) in gameModes"
           :key="mode.title"
           :class="['glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden group', mode.featured ? 'border-primary/30 bg-primary/5' : '']"
+          data-reveal
+          :data-reveal-delay="i * 70"
         >
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
 

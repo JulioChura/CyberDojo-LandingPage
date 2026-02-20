@@ -14,12 +14,14 @@
       <!-- Pricing Cards -->
       <div class="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3">
         <div 
-          v-for="plan in pricingPlans" 
+          v-for="(plan, i) in pricingPlans" 
           :key="plan.name"
           :class="[
             'glass-card rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 flex flex-col',
             plan.featured && 'relative border-primary/50 shadow-neon bg-[#151226]'
           ]"
+          data-reveal
+          :data-reveal-delay="i * 90"
         >
           <!-- Featured Badge -->
           <div 

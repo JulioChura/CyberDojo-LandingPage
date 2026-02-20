@@ -43,4 +43,24 @@
   .hero-overlay {
     @apply absolute top-0 left-0 w-full h-full bg-[#0b0c1a]/70 z-[1];
   }
+
+  /* Entrance reveal animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px) scale(0.995);
+    will-change: transform, opacity;
+    transition: opacity 480ms cubic-bezier(.22,.9,.35,1), transform 480ms cubic-bezier(.22,.9,.35,1);
+  }
+
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: reveal-bounce 640ms cubic-bezier(.22,.9,.35,1) both;
+  }
+
+  @keyframes reveal-bounce {
+    0% { opacity: 0; transform: translateY(20px) scale(0.99); }
+    60% { opacity: 1; transform: translateY(-6px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+  }
 }
